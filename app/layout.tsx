@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://replyr.app').replace(/\/$/, '')
 
-const title = 'Replyr — Never miss another lead'
+const title = 'Replyr - Never miss another lead'
 const description =
   'AI lead-response agent for US home services contractors. Replies in 30 seconds, qualifies leads, books appointments straight to your Google Calendar.'
 
