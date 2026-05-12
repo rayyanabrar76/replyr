@@ -5,20 +5,38 @@ import { Section } from '@/components/ui/section'
 import { Wordmark } from '@/components/ui/wordmark'
 
 const NAV_LINKS = [
-  { href: '/#features', label: 'Features' },
+  { href: '/features', label: 'Features' },
   { href: '/#how-it-works', label: 'How it works' },
   { href: '/pricing', label: 'Pricing' },
-  { href: '/#faq', label: 'FAQ' },
+  { href: '/for/plumbers', label: 'For Contractors' },
 ]
 
 const FOOTER_LINKS = [
   {
     title: 'Product',
     links: [
-      { href: '/#features', label: 'Features' },
-      { href: '/#how-it-works', label: 'How it works' },
+      { href: '/features', label: 'Features' },
       { href: '/pricing', label: 'Pricing' },
+      { href: '/blog', label: 'Blog' },
       { href: '/login', label: 'Sign in' },
+    ],
+  },
+  {
+    title: 'For Contractors',
+    links: [
+      { href: '/for/plumbers', label: 'Plumbers' },
+      { href: '/for/hvac', label: 'HVAC' },
+      { href: '/for/roofers', label: 'Roofers' },
+      { href: '/for/electricians', label: 'Electricians' },
+      { href: '/for/landscapers', label: 'Landscapers' },
+      { href: '/for/general-contractors', label: 'General Contractors' },
+    ],
+  },
+  {
+    title: 'Compare',
+    links: [
+      { href: '/compare/podium-alternative', label: 'vs. Podium' },
+      { href: '/compare/hatch-alternative', label: 'vs. Hatch' },
     ],
   },
   {
@@ -26,11 +44,6 @@ const FOOTER_LINKS = [
     links: [
       { href: '/#faq', label: 'FAQ' },
       { href: 'mailto:hello@replyr.app', label: 'Contact' },
-    ],
-  },
-  {
-    title: 'Legal',
-    links: [
       { href: '/legal/terms', label: 'Terms' },
       { href: '/legal/privacy', label: 'Privacy' },
     ],
@@ -84,7 +97,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
 
       <footer className="mt-24 border-t border-border/60 py-12">
         <Section variant="wide">
-          <div className="grid gap-12 md:grid-cols-4">
+          <div className="grid gap-12 md:grid-cols-5">
             <div className="md:col-span-1">
               <Wordmark size="sm" href="/" />
               <p className="mt-4 max-w-xs text-sm text-muted-foreground">

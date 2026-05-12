@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import {
   ArrowRight,
   CalendarCheck,
@@ -6,7 +7,6 @@ import {
   Code,
   Inbox,
   MessageCircle,
-  MessageSquare,
   Phone,
   ShieldCheck,
   Sparkles,
@@ -23,11 +23,13 @@ import {
 import { Button } from '@/components/ui/button'
 import { GradientBlur } from '@/components/ui/gradient-blur'
 import { Section } from '@/components/ui/section'
+import { JsonLd, softwareAppSchema, faqPageSchema } from '@/components/seo/JsonLd'
 
-export const metadata = {
-  title: 'Replyr — AI lead response for home services contractors',
+export const metadata: Metadata = {
+  title: 'Replyr — AI Lead Response for Home Services Contractors',
   description:
-    'AI assistant that responds to your customers in 30 seconds — qualifies, answers questions, and books jobs straight to your calendar. Built for HVAC, plumbing, roofing, and more.',
+    'Stop losing leads to slow replies. Replyr responds to contractor inquiries in 30 seconds, qualifies leads, and books appointments straight to Google Calendar. 14-day free trial.',
+  alternates: { canonical: '/' },
 }
 
 const INDUSTRIES = [
@@ -144,6 +146,8 @@ const FAQ = [
 export default function LandingPage() {
   return (
     <>
+      <JsonLd data={softwareAppSchema} />
+      <JsonLd data={faqPageSchema(FAQ)} />
       {/* ─────────────────── HERO ─────────────────── */}
       <section className="relative overflow-hidden">
         <GradientBlur position="top-left" size="lg" />

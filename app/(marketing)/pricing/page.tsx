@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { ArrowRight, Check, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import {
@@ -9,11 +10,13 @@ import {
 import { Button } from '@/components/ui/button'
 import { GradientBlur } from '@/components/ui/gradient-blur'
 import { Section } from '@/components/ui/section'
+import { JsonLd, pricingSchema } from '@/components/seo/JsonLd'
 
-export const metadata = {
-  title: 'Pricing — Replyr',
+export const metadata: Metadata = {
+  title: 'Pricing — Simple, Flat-Rate AI Lead Response',
   description:
-    '$99/month flat. Unlimited leads, AI replies, calendar booking, email channel. 14-day free trial, no credit card.',
+    '$99/month flat — unlimited AI lead replies, Google Calendar booking, web and email channels. 14-day free trial for contractors, no credit card required.',
+  alternates: { canonical: '/pricing' },
 }
 
 const FEATURES = [
@@ -59,6 +62,7 @@ const FAQ = [
 export default function PricingPage() {
   return (
     <>
+      <JsonLd data={pricingSchema} />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <GradientBlur position="top-left" size="lg" />

@@ -1,0 +1,12 @@
+{
+  "name": "Replyr",
+  "short_name": "Replyr",
+  "description": "AI lead-response agent for home services contractors",
+  "theme_color": "#7c3aed",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
